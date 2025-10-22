@@ -1,35 +1,31 @@
-a = 0
-b = 1
-i = 2
-u = 0
-n = int(input("Введите длинну ряда"))
-c = [a,b]
+a, b = 0, 1
+n = int(input("Введите длину ряда: "))
+c = [a, b] # список, в котором хранятся числа ряда Фибоначчи
+u = 0 #счётчик
+while len(c) < n:
+    a, b = b, a + b          # получаем следующее число Фибоначчи
+    c.append(b)              # добавляем новое число в список
 
-while i < n:
-    a, b = b, a + b
-    c.append(b)
-    i += 1
-print (c)
-    
+print("Исходный ряд:", c)
+
 for i in range(n):
     if c[i] % 2 == 0:
-        c[i] = c[i] * 2
+        c[i] = c[i] * 2      # если число четное — удваиваем
     else:
-        c[i] = c[i] ** 2
-print (c)
+        c[i] = c[i] ** 2     # если нечетное — возводим в квадрат
 
-qwe = sum(c) / n
+print("После преобразования:", c)
+
+qwe = sum(c) / n             # вычисляем среднее арифметическое элементов списка
+
 for i in range(n):
-    if i > qwe:
+    if c[i] > qwe:           # считаем, сколько чисел больше среднего
         u += 1
-    else:
-        u +=0
-print (u)
-    
+
+print("Количество элементов больше среднего:", u)
 
 c_max = max(c)
 c_min = min(c)
-print ('min = ', c_min)
-print ('max = ', c_max)
-c_length = len(c)
-print ('dlinna = ', c_length)
+print("min =", c_min)
+print("max =", c_max)
+print("длина =", len(c))     # длина списка для проверки
