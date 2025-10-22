@@ -1,9 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 
-x = np.linspace(-15, 15) #кол-во иксов = 30
-y = x**3 - 3*x**2 - x + 3 #формула функции
+kolichestvo_tochek = random.randint(20, 100) # Случайное количество точек от 20 до 100
 
-plt.plot(x, y) #делает график
+x = np.linspace(1, kolichestvo_tochek)  # кол-во иксов случайное от 20 до 100
+y = x**3 - 3*x**2 - x + 3  # формула функции
 
-plt.show() #выводит график
+plt.plot(x, y)  # делает график
+plt.show()  # выводит график
