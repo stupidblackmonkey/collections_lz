@@ -35,6 +35,7 @@ while True:
         else:
             print("Человек не найден")
     
-    elif vibor > "3":
+   else:
        print("Неверный выбор. Попробуйте снова.")
     
+
